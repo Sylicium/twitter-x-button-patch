@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter X Button patch",
+    "description":"",
+    "author": "Sylicium",
+    "version": "1.0.0",
+    "icons": {
+        "16": "/images/x-logo-16.png",
+        "48": "/images/x-logo-48.png",
+        "128": "/images/x-logo-128.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Twitter X Button patch",
+        "default_icon": {
+            "16": "/images/x-logo-16.png",
+            "48": "/images/x-logo-48.png",
+            "128": "/images//x-logo-128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://google.com/*","https://x.com/*","https://twitter.com/*"],
+            "css": ["main.css"]
+        },
+        {
+            "matches": ["https://www.google.com/*","https://x.com/*","https://twitter.com/*"],
+            "js": ["inject.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "identity"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' ; object-src 'self'"
+    },
+    "background": {
+        "service_worker": "background.js"
+      }
+}
