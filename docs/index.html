@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction d'interface pour Twitter - Extension Chrome</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #fff;
+      }
+      header {
+        background-color: #22292e;
+        text-align: center;
+        padding: 1rem 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #1da1f2;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.3em;
+        text-shadow: rgb(238, 255, 0) 1px 0 10px;
+      }
+      .cta-button:hover {
+        background-color: #0c87b8;
+      }
+      .extension-image {
+        max-width: 100%;
+        display: block;
+        margin: 2rem auto;
+        border-radius: 5px;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        background-color: white;
+      }
+      
+      .center-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      footer {
+        background-color: #22292e;
+        text-align: center;
+        padding: 1rem 0;
+      }
+        .link1 {
+            color: aqua;
+            text-decoration: underline;
+        }
+        .link1:hover {
+            text-decoration: none;
+        }
+        .link2 {
+            color: aqua;
+            text-decoration: none;
+        }
+        .link2:hover {
+            text-decoration: underline;
+        }
+
+        span.markdown {
+          font-family: consolas;
+          padding: 3px 6px;
+          background-color:#292929;
+          border-radius: 3px;
+        }
+        .btn {
+            margin: 3px;
+            padding: 1px 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+  <body>
+    <header>
+      <h1>Twitter X Button Patch</h1>
+    </header>
+    <div class="container">
+      <img class="extension-image" src="x-logo-128.png" alt="Extension icon">
+      <p>
+        So does this happen to you too? That weird X button not working as expected to close the page?<br>No worries, here is the solution!
+      </p>
+      <p>
+        This simple extension solves this problem by adding simple code to close the page when you now click that X button.<br>Simple to install, no additional action required. Relax and be happy!
+      </p>
+      <p>
+        <h1>How to install ?</h1>
+        (Note that this extension is only available on Chrome fo now)
+        <br>
+        <br>1. Right clic on the .crx file in the releases, then Save as and save it.
+        <br>2. Go to the <span class="markdown">chrome://extensions/</span> list page <button class="btn" onclick="copyTextToClipboard('chrome://extensions/')">clic to copy URI</button>
+        <br>3. Open a file explorer to the .crx file, and Drag&drop it on the page.
+        <br>
+        <br>Clic install on the popup and its done !
+      </p>
+      <div class="center-div">
+        <a class="cta-button" href="https://github.com/Sylicium/twitter-x-button-patch/releases/latest" target="_BLANK">Get it now !</a>
+      </div>
+    </div>
+    <footer>
+      <p>Developper - Sylicium - 2023</p>
+    </footer>
+
+
+    <script>
+
+    function copyTextToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+            () => {
+                console.log("clipboard successfully set")
+            },
+            (e) => {
+                console.log("clipboard write failed",e)
+            },
+        );
+        alert("Copied in clipboard!")
+    }
+
+    </script>
+  
+  </body></html>
