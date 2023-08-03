@@ -3,7 +3,8 @@
     "name": "Twitter X Button patch",
     "description":"",
     "author": "Sylicium",
-    "version": "0.1.0",
+    "version": "0.2.0",
+    "update_url": "https://raw.githubusercontent.com/Sylicium/twitter-x-button-patch/main/updateXML.xml",
     "icons": {
         "16": "/images/x-logo-16.png",
         "48": "/images/x-logo-48.png",
